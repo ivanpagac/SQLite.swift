@@ -22,9 +22,13 @@
 // THE SOFTWARE.
 //
 
-@import Foundation;
+@@import Foundation;
 #if defined(SQLITE_SWIFT_STANDALONE)
 @import sqlite3;
+
+#elif defined(SQLITE_SWIFT_SQLCIPHER)
+@import SQLCipher;
+
 #else
 @import SQLite3;
 #endif
